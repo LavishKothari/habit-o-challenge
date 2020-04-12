@@ -1,4 +1,6 @@
 package com.lavi.habitchallenge;
 
-public class ChallengeType {
+public enum ChallengeType {
+    DAILY_CHALLENGE,
+    NUMERIC_CHALLENGE
 }
