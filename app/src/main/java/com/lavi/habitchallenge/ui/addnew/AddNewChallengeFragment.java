@@ -13,23 +13,13 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.lavi.habitchallenge.R;
+import com.lavi.habitchallenge.ui.AddNewChallengeView;
 
 public class AddNewChallengeFragment extends Fragment {
 
-    private AddNewChallengeViewModel addNewChallengeViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        addNewChallengeViewModel =
-                ViewModelProviders.of(this).get(AddNewChallengeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_addnew, container, false);
-        final TextView textView = root.findViewById(R.id.text_slideshow);
-        addNewChallengeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
-        return root;
+        return new AddNewChallengeView(getContext());
     }
 }

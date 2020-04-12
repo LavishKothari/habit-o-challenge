@@ -14,11 +14,11 @@ import android.widget.TextView;
 import com.lavi.habitchallenge.ChallengeType;
 
 
-public class ChallengeView extends LinearLayout {
+public class OngoingChallengeView extends LinearLayout {
 
     Paint paint;
 
-    public ChallengeView(Context context, String headingText, ChallengeType challengeType) {
+    public OngoingChallengeView(Context context, String headingText, ChallengeType challengeType) {
         super(context);
 
         setWillNotDraw(false);

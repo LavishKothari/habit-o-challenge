@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.lavi.habitchallenge.ChallengeType;
-import com.lavi.habitchallenge.ui.ChallengeView;
+import com.lavi.habitchallenge.ui.OngoingChallengeView;
 
 public class OngoingChallengesFragment extends Fragment {
 
@@ -24,7 +24,7 @@ public class OngoingChallengesFragment extends Fragment {
         for (int i = 0; i < 100; i++) {
             ChallengeType challengeType = i % 2 == 0 ? ChallengeType.DAILY_CHALLENGE : ChallengeType.NUMERIC_CHALLENGE;
             parentLinearLayout.addView(
-                    new ChallengeView(
+                    new OngoingChallengeView(
                             getContext(),
                             i + " This is a Sample heading",
                             challengeType
